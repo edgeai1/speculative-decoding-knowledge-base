@@ -1,5 +1,7 @@
 .sources/
 .cache/
+.site/
+.venv/
 __pycache__/
 *.pyc
 *.tmp

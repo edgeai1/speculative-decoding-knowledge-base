@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Speculative Decoding Research Knowledge Base</title>
+  <desc id="desc">A visual banner showing draft, verify, and accept paths for a 66-paper research knowledge base.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#080d1d"/>
+      <stop offset=".52" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#164e63"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="720" y1="60" x2="1120" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#22d3ee" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#fff" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#grid)"/>
+  <circle cx="1000" cy="70" r="180" fill="url(#glow)"/>
+  <circle cx="80" cy="360" r="180" fill="#6366f1" opacity=".1"/>
+
+  <g font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="72" y="82" fill="#67e8f9" font-size="17" font-weight="700" letter-spacing="4">RESEARCH KNOWLEDGE BASE · 2026</text>
+    <text x="70" y="145" fill="#fff" font-size="49" font-weight="760" letter-spacing="-1.6">SPECULATIVE DECODING</text>
+    <text x="72" y="186" fill="#cbd5e1" font-size="24" font-weight="500">投机解码研究知识库</text>
+    <text x="72" y="230" fill="#94a3b8" font-size="16">From rigorous sampling theory to production-grade scheduling</text>
+
+    <g transform="translate(72 270)" font-size="14" font-weight="650">
+      <rect width="132" height="38" rx="19" fill="#fff" fill-opacity=".08" stroke="#a5f3fc" stroke-opacity=".2"/>
+      <text x="66" y="24" text-anchor="middle" fill="#e0f2fe">66 PAPERS</text>
+      <rect x="144" width="146" height="38" rx="19" fill="#fff" fill-opacity=".08" stroke="#a5f3fc" stroke-opacity=".2"/>
+      <text x="217" y="24" text-anchor="middle" fill="#e0f2fe">1,188 PAGES</text>
+      <rect x="302" width="130" height="38" rx="19" fill="#fff" fill-opacity=".08" stroke="#a5f3fc" stroke-opacity=".2"/>
+      <text x="367" y="24" text-anchor="middle" fill="#e0f2fe">6 TRACKS</text>
+    </g>
+  </g>
+
+  <g transform="translate(720 28)">
+    <circle cx="220" cy="152" r="75" fill="#22d3ee" opacity=".13" filter="url(#shadow)"/>
+    <path d="M28 152H150M230 152h85M230 152l85-78M230 152l85 78M395 74h60M395 152h60M395 230h60" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" opacity=".74"/>
+    <path d="m126 145 12 7-12 7m174-14 12 7-12 7m1-91 12 2-5 11m-7 155 12-2-5-11" fill="none" stroke="#a5f3fc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-weight="700" text-anchor="middle">
+      <rect x="0" y="124" width="104" height="56" rx="18" fill="#0f172a" stroke="#818cf8" stroke-opacity=".8"/>
+      <text x="52" y="157" fill="#c7d2fe" font-size="16">DRAFT · q</text>
+
+      <circle cx="190" cy="152" r="45" fill="#164e63" stroke="#67e8f9" stroke-width="2"/>
+      <text x="190" y="147" fill="#ecfeff" font-size="14">VERIFY</text>
+      <text x="190" y="167" fill="#67e8f9" font-size="13">p / q</text>
+
+      <rect x="315" y="47" width="80" height="54" rx="16" fill="#0f172a" stroke="#22d3ee" stroke-opacity=".75"/>
+      <text x="355" y="79" fill="#cffafe" font-size="14">accept</text>
+      <rect x="315" y="125" width="80" height="54" rx="16" fill="#0f172a" stroke="#818cf8" stroke-opacity=".75"/>
+      <text x="355" y="157" fill="#e0e7ff" font-size="14">branch</text>
+      <rect x="315" y="203" width="80" height="54" rx="16" fill="#0f172a" stroke="#22d3ee" stroke-opacity=".75"/>
+      <text x="355" y="235" fill="#cffafe" font-size="14">correct</text>
+
+      <circle cx="472" cy="74" r="17" fill="#22d3ee"/>
+      <circle cx="472" cy="152" r="17" fill="#818cf8"/>
+      <circle cx="472" cy="230" r="17" fill="#22d3ee"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,136 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: Speculative Decoding 研究知识库
+site_url: https://edgeai1.github.io/speculative-decoding-knowledge-base/
+site_description: 截至 2026-08-10 的投机解码研究知识库：66 篇核心论文全文精读、方法谱系、系统比较与研究空白。
+site_author: edgeai1
+repo_url: https://github.com/edgeai1/speculative-decoding-knowledge-base
+repo_name: edgeai1/speculative-decoding-knowledge-base
+edit_uri: edit/main/
+copyright: 研究快照截至 2026-08-10 · 原始论文版权归各作者与出版方所有
+
+docs_dir: .cache/docs-src
+site_dir: ../.site/speculative-decoding-knowledge-base
+strict: true
+
+not_in_nav: |
+  /papers/
+  /metadata/
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+
+theme:
+  name: material
+  language: zh
+  favicon: assets/images/favicon.svg
+  font: false
+  icon:
+    logo: material/lightning-bolt-circle
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.tooltips
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+nav:
+  - 首页: index.md
+  - 研究地图:
+      - 方法谱系与分类: TAXONOMY.md
+      - 跨论文比较: COMPARISON.md
+      - 研究空白 Shortlist: landscape/research-gaps-shortlist.md
+      - 完整方向综述: landscape/complete-survey-2026-08-10.md
+  - 论文精读:
+      - 全部 66 篇: catalog.md
+      - 01 基础、理论与综述: collections/01-foundations.md
+      - 02 独立 Drafter 与对齐: collections/02-independent-drafters.md
+      - 03 Feature Head、MTP 与并行块: collections/03-feature-mtp.md
+      - 04 Tree、多候选与 Verification: collections/04-tree-verification.md
+      - 05 Training-free、自推测与长上下文: collections/05-self-spec-long-context.md
+      - 06 Serving、基准、安全与应用: collections/06-serving-security.md
+  - 证据与复现:
+      - 调研与精读方法: METHODOLOGY.md
+      - 术语与正确性边界: GLOSSARY.md
+      - 来源与已读版本: SOURCES.md
+      - 完整性审计: AUDIT_REPORT.md
+  - GitHub: https://github.com/edgeai1/speculative-decoding-knowledge-base
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/edgeai1/speculative-decoding-knowledge-base
+      name: GitHub repository

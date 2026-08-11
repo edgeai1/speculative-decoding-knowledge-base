@@ -12,6 +12,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+IGNORED_PARTS = {".sources", ".cache", ".git", ".venv", ".site"}
 
 
 def parse_front_matter(path: Path) -> dict[str, str]:
@@ -87,7 +88,31 @@ def main() -> int:
         else:
             warnings.append(f"{path.stem}: local PDF absent; public note/source metadata still available")
 
-    markdown_files = sorted(ROOT.glob("*.md")) + sorted((ROOT / "landscape").glob("*.md")) + notes
+    website_files = [
+        ROOT / "HOME.md",
+        ROOT / "mkdocs.yml",
+        ROOT / "pyproject.toml",
+        ROOT / "uv.lock",
+        ROOT / ".github" / "workflows" / "pages.yml",
+        ROOT / "assets" / "stylesheets" / "extra.css",
+        ROOT / "assets" / "javascripts" / "mathjax.js",
+        ROOT / "assets" / "images" / "favicon.svg",
+        ROOT / "assets" / "images" / "repo-banner.svg",
+        ROOT / "scripts" / "stage_docs.py",
+        ROOT / "scripts" / "check_built_site.py",
+    ]
+    website_files.extend(sorted((ROOT / "collections").glob("*.md")))
+    if len(list((ROOT / "collections").glob("*.md"))) != 6:
+        errors.append("expected six generated collection landing pages")
+    for path in website_files:
+        if not path.is_file():
+            errors.append(f"website source missing: {path.relative_to(ROOT)}")
+
+    markdown_files = [
+        path
+        for path in sorted(ROOT.rglob("*.md"))
+        if not any(part in IGNORED_PARTS for part in path.parts)
+    ]
     link_pattern = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
     for path in markdown_files:
         for target in link_pattern.findall(path.read_text(encoding="utf-8")):
@@ -101,7 +126,7 @@ def main() -> int:
     # Split every marker so this audit source does not trigger its own literal scan.
     forbidden = ["github" + "_pat_", "BEGIN " + "PRIVATE KEY", "XDS" + "@2025"]
     for path in sorted(ROOT.rglob("*")):
-        if not path.is_file() or any(part in {".sources", ".cache", ".git"} for part in path.parts):
+        if not path.is_file() or any(part in IGNORED_PARTS for part in path.parts):
             continue
         try:
             text = path.read_text(encoding="utf-8")
@@ -112,7 +137,7 @@ def main() -> int:
                 errors.append(f"sensitive marker found in {path.relative_to(ROOT)}")
 
     gitignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
-    for entry in (".sources/", ".cache/"):
+    for entry in (".sources/", ".cache/", ".venv/", ".site/"):
         if entry not in gitignore:
             errors.append(f".gitignore missing {entry}")
 

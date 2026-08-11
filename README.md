@@ -1,8 +1,23 @@
-# Speculative Decoding 研究知识库
+<div align="center">
+  <img src="assets/images/repo-banner.svg" width="100%" alt="Speculative Decoding Research Knowledge Base banner">
+  <h1>Speculative Decoding 研究知识库</h1>
+  <p>把论文森林变成一张可比较、可复现、可以直接选题的研究地图。</p>
+  <p>
+    <a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/"><img alt="Documentation" src="https://img.shields.io/badge/Documentation-在线阅读-4f46e5?style=for-the-badge&logo=materialformkdocs&logoColor=white"></a>
+    <a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/AUDIT_REPORT/"><img alt="Audit" src="https://img.shields.io/badge/Audit-0_errors-0891b2?style=for-the-badge&logo=checkmarx&logoColor=white"></a>
+    <a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/papers/03-feature-mtp-parallel-block/2026--dspark/"><img alt="DSpark" src="https://img.shields.io/badge/Includes-DSpark-312e81?style=for-the-badge"></a>
+  </p>
+  <p><b>66 篇核心精读</b> · <b>1,188 页全文核读</b> · <b>6 条研究主线</b> · <b>截至 2026-08-10</b></p>
+</div>
 
-> 截止日期：**2026-08-10（Asia/Shanghai）**。本库收录 **66 篇核心论文的逐篇全文精读**，覆盖 2018–2026 年 8 月；每个条目均记录已读版本、页码范围与 PDF SHA-256，便于复核。
+---
+
+> [!NOTE]
+> 本库覆盖 2018–2026 年 8 月的 66 篇核心论文。每个条目均记录已读版本、页码范围与 PDF SHA-256；原始 PDF 因版权不进入仓库。
 
 这个知识库面向准备进入 speculative decoding 研究的读者。目标不是复述摘要，而是把每篇论文的问题、假设、算法、公式、训练与推理流程、正确性边界、实验、实现路径、复现风险、局限和可继续研究的问题压缩进一个可独立阅读的中文文件。
+
+<p align="center"><a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/"><b>打开可搜索文档站 →</b></a></p>
 
 ## 从哪里开始
 
@@ -20,6 +35,8 @@
 
 ### 01 基础、理论与综述（9 篇）
 
+[查看本类导读与推荐阅读路线](collections/01-foundations.md)
+
 | 年份 | 论文 | Venue |
 |---:|---|---|
 | 2018 | [Blockwise Parallel Decoding for Deep Autoregressive Models](papers/01-foundations-theory-surveys/2018--blockwise-parallel-decoding-2018.md) | NeurIPS 2018 |
@@ -34,6 +51,8 @@
 
 ### 02 独立 drafter、对齐与在线选择（7 篇）
 
+[查看本类导读与推荐阅读路线](collections/02-independent-drafters.md)
+
 | 年份 | 论文 | Venue |
 |---:|---|---|
 | 2023 | [Accelerating LLM Inference with Staged Speculative Decoding](papers/02-independent-drafters-alignment-selection/2023--staged-speculative-decoding.md) | ICML 2023 workshop / arXiv |
@@ -45,6 +64,8 @@
 | 2026 | [Speculative Decoding and the Curse of Multilinguality](papers/02-independent-drafters-alignment-selection/2026--curse-of-multilinguality.md) | arXiv preprint |
 
 ### 03 Feature head、MTP 与并行块草稿（20 篇）
+
+[查看本类导读与推荐阅读路线](collections/03-feature-mtp.md)
 
 | 年份 | 论文 | Venue |
 |---:|---|---|
@@ -71,6 +92,8 @@
 
 ### 04 Tree、多候选与 verification（9 篇）
 
+[查看本类导读与推荐阅读路线](collections/04-tree-verification.md)
+
 | 年份 | 论文 | Venue |
 |---:|---|---|
 | 2023 | [SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification](papers/04-tree-multi-draft-verification/2023--specinfer.md) | ASPLOS 2024 |
@@ -84,6 +107,8 @@
 | 2026 | [Revisiting Lossy Verification in Speculative Decoding: Mechanisms, Trade-offs, and Failure Modes](papers/04-tree-multi-draft-verification/2026--revisiting-lossy-verification.md) | arXiv preprint |
 
 ### 05 Training-free、自推测与长上下文（10 篇）
+
+[查看本类导读与推荐阅读路线](collections/05-self-spec-long-context.md)
 
 | 年份 | 论文 | Venue |
 |---:|---|---|
@@ -99,6 +124,8 @@
 | 2026 | [Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context](papers/05-training-free-self-spec-long-context/2026--windowed-mtp.md) | arXiv preprint |
 
 ### 06 Serving、基准、安全与应用（11 篇）
+
+[查看本类导读与推荐阅读路线](collections/06-serving-security.md)
 
 | 年份 | 论文 | Venue |
 |---:|---|---|
@@ -118,8 +145,10 @@
 
 ```text
 papers/       66 篇逐篇精读，按研究问题分为 6 类
+collections/  6 个专题入口与推荐阅读路线
 landscape/    全方向综述、研究空白与候选问题
 metadata/     核心语料元数据与高召回候选表
+assets/       文档站视觉样式、图标与横幅
 scripts/      语料构建、阅读证据包与质量审计脚本
 ```
 
