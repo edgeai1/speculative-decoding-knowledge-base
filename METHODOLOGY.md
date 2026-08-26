@@ -4,6 +4,8 @@
 
 本快照截止 **2026-08-10（Asia/Shanghai）**。核心集不是按标题关键词自动得到，而是从高召回检索结果中人工筛出对 speculative decoding 的 proposal、verification、training、serving、benchmark、安全或应用有直接技术贡献的论文。
 
+> 核心精读快照仍以 2026-08-10 为证据边界；[2026-08-26 增量更新](landscape/incremental-update-2026-08-26.md)单独记录后续发现。增量论文在只核验方法、结果、消融和局限时标为 `method_results_verified`，必须完成逐页全文流程后才会升为 `deep_read_complete`。
+
 ## 语料规模
 
 - 高召回候选：1260 条，保留在 `metadata/literature_candidates.csv`，其中包含综述引用、相邻方向和误召回，不能解释为1260篇核心论文。

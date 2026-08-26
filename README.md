@@ -6,14 +6,15 @@
     <a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/"><img alt="Documentation" src="https://img.shields.io/badge/Documentation-在线阅读-4f46e5?style=for-the-badge&logo=materialformkdocs&logoColor=white"></a>
     <a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/AUDIT_REPORT/"><img alt="Audit" src="https://img.shields.io/badge/Audit-0_errors-0891b2?style=for-the-badge&logo=checkmarx&logoColor=white"></a>
     <a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/papers/03-feature-mtp-parallel-block/2026--dspark/"><img alt="DSpark" src="https://img.shields.io/badge/Includes-DSpark-312e81?style=for-the-badge"></a>
+    <a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/landscape/incremental-update-2026-08-26/"><img alt="Latest scan" src="https://img.shields.io/badge/Latest_scan-2026--08--26-0f766e?style=for-the-badge"></a>
   </p>
-  <p><b>66 篇核心精读</b> · <b>1,188 页全文核读</b> · <b>6 条研究主线</b> · <b>截至 2026-08-10</b></p>
+  <p><b>66 篇核心精读</b> · <b>1,188 页全文核读</b> · <b>6 条研究主线</b> · <b>最新检索至 2026-08-26</b></p>
 </div>
 
 ---
 
 > [!NOTE]
-> 本库覆盖 2018–2026 年 8 月的 66 篇核心论文。每个条目均记录已读版本、页码范围与 PDF SHA-256；原始 PDF 因版权不进入仓库。
+> 66 篇核心精读快照截止 2026-08-10；[2026-08-26 增量更新](landscape/incremental-update-2026-08-26.md)另核验 20 份 arXiv PDF、补出 4 个正式来源方法。增量项尚未冒充逐页精读完成。每个核心条目均记录已读版本、页码范围与 PDF SHA-256；原始 PDF 因版权不进入仓库。
 
 这个知识库面向准备进入 speculative decoding 研究的读者。目标不是复述摘要，而是把每篇论文的问题、假设、算法、公式、训练与推理流程、正确性边界、实验、实现路径、复现风险、局限和可继续研究的问题压缩进一个可独立阅读的中文文件。
 
@@ -25,7 +26,7 @@
 - 准备做算法：看 [跨论文比较与研究问题](COMPARISON.md) 和 [研究空白 shortlist](landscape/research-gaps-shortlist.md)。
 - 准备做系统：重点读第 05/06 类、DSpark、DFlash、SPEED-Bench 和 *Performance or Illusion?*。
 - 核对 lossless/lossy：先看 [术语与正确性边界](GLOSSARY.md)，再看 Block Verification、MARS、Revisiting Lossy Verification 与 ASD。
-- 查更宽文献：看 [截至 2026-08-10 的完整方向综述](landscape/complete-survey-2026-08-10.md)；[1260 条高召回候选表](metadata/literature_candidates.csv) 仅是检索候选，不等于 1260 篇核心论文或已完成精读。
+- 查最新进展：先看 [截至 2026-08-26 的增量核验](landscape/incremental-update-2026-08-26.md) 和 [25 条结构化增量记录](metadata/incremental_candidates_2026-08-26.csv)，再看 [截至 2026-08-10 的完整方向综述](landscape/complete-survey-2026-08-10.md)。[1,260 条高召回候选表](metadata/literature_candidates.csv) 只是旧快照检索候选，不等于核心论文或已完成精读。
 
 ## 阅读状态与证据边界
 

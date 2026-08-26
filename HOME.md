@@ -1,6 +1,6 @@
 ---
 title: 首页
-description: 截至 2026-08-10 的 Speculative Decoding 研究地图与 66 篇核心论文全文精读。
+description: 66 篇核心论文全文精读，并追踪至 2026-08-26 的 Speculative Decoding 最新研究。
 hide:
   - navigation
   - toc
@@ -18,6 +18,7 @@ hide:
 
 [浏览 66 篇精读](README.md){ .md-button .md-button--primary }
 [查看研究空白](landscape/research-gaps-shortlist.md){ .md-button }
+[查看 8/26 增量](landscape/incremental-update-2026-08-26.md){ .md-button }
 
 </div>
 
@@ -40,6 +41,12 @@ hide:
 <div class="kb-stat"><strong>1,260</strong><span>条高召回候选</span></div>
 
 </div>
+
+!!! info "最新检索 · 2026-08-26"
+
+    在 2026-08-10 核心快照之外，新核验 **20 份 arXiv PDF（354 页）**，并从正式出版源补出 **AHSD、SPIDE、LinguaSpec、HCSpec**。重点变化覆盖 ResiSpec 的严格 residual correction、DARTree/LiLiCorr 的并行 joint proposal、TreeWY 的 recurrent-state tree verification，以及 AgentSpec/S2-MoE/MemSpec 的真实 serving 成本。
+
+    [打开增量研究报告 →](landscape/incremental-update-2026-08-26.md){ .md-button .md-button--primary }
 
 ## 先选你的入口
 

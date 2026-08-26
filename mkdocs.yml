@@ -2,12 +2,12 @@
 
 site_name: Speculative Decoding 研究知识库
 site_url: https://edgeai1.github.io/speculative-decoding-knowledge-base/
-site_description: 截至 2026-08-10 的投机解码研究知识库：66 篇核心论文全文精读、方法谱系、系统比较与研究空白。
+site_description: 66 篇投机解码核心论文全文精读，并追踪至 2026-08-26 的最新方法、系统比较与研究空白。
 site_author: edgeai1
 repo_url: https://github.com/edgeai1/speculative-decoding-knowledge-base
 repo_name: edgeai1/speculative-decoding-knowledge-base
 edit_uri: edit/main/
-copyright: 研究快照截至 2026-08-10 · 原始论文版权归各作者与出版方所有
+copyright: 核心精读快照 2026-08-10 · 最新检索 2026-08-26 · 原始论文版权归各作者与出版方所有
 
 docs_dir: .cache/docs-src
 site_dir: ../.site/speculative-decoding-knowledge-base
@@ -70,6 +70,7 @@ nav:
       - 方法谱系与分类: TAXONOMY.md
       - 跨论文比较: COMPARISON.md
       - 研究空白 Shortlist: landscape/research-gaps-shortlist.md
+      - 最新增量（2026-08-26）: landscape/incremental-update-2026-08-26.md
       - 完整方向综述: landscape/complete-survey-2026-08-10.md
   - 论文精读:
       - 全部 66 篇: catalog.md
