@@ -20,6 +20,14 @@
 
 <p align="center"><a href="https://edgeai1.github.io/speculative-decoding-knowledge-base/"><b>打开可搜索文档站 →</b></a></p>
 
+## 洞察报告 PPT
+
+[下载《投机解码：从算法加速到系统协同》（20 页，可编辑 PPT）](assets/slides/speculative-decoding-insights-2026-08-26.pptx)
+
+报告涵盖严格采样机制、EAGLE-3 / DFlash / DSpark、长上下文与服务调度、性能证据边界、研究机会及验证路径。采用白底、深红标题与灰阶图表的简约学术风格，每页附来源链接与讲解备注。
+
+资料范围为 2026-08-10 核心精读快照及 2026-08-26 增量核验，编制于 2026-09-11。论文结果、机制推演和项目建议分别标注；报告未新增模型跑分。
+
 ## 从哪里开始
 
 - 第一次进入方向：先看 [方法谱系与分类](TAXONOMY.md)，再读基础类别中的两篇 2023 年 speculative sampling 奠基论文。
